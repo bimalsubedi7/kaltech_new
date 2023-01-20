@@ -170,12 +170,15 @@ nav {
 }
 
 .hero-right {
-  width: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #about {
   margin: 120px;
 }
+
 
 .about-content {
   display: flex;
@@ -183,6 +186,13 @@ nav {
   justify-content: center;
   gap: 20%;
 }
+
+.about-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .about-right h2 {
   margin-bottom: 10px;
@@ -214,15 +224,15 @@ nav {
 
 .service-card {
   box-shadow: 5px 5px 20px #000;
-  border-radius: 5px;
+  border-radius: 3px;
   overflow: hidden;
-  height: 400px;
+  height: 300px;
   cursor: pointer;
   position: relative;
 }
 
 .service-card img {
-  height: 400px;
+  height: 300px;
   width: 300px;
   border-radius: 5px;
   transition: all 500ms;
@@ -314,11 +324,15 @@ nav {
 .team-content {
   padding: 60px 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 3%;
 }
 
 .team-card {
-  width: 22%;
+  width: 250px;
+
+  flex-shrink: 0;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
@@ -401,7 +415,7 @@ nav {
   justify-content: center;
 }
 
-.testimonial-card{
+.testimonial-card {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -409,38 +423,37 @@ nav {
   justify-content: center;
 }
 
-.testimonial-card img{
+.testimonial-card img {
   height: 130px;
   width: 130px;
   border: 6px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
 }
 
-.testimonial-card h3{
-margin-top: 5px;
-margin-bottom: 10px;
+.testimonial-card h3 {
+  margin-top: 5px;
+  margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.testimonial-card h4{
+.testimonial-card h4 {
   font-size: 14px;
   color: #ddd;
   margin-bottom: 15px;
 }
 
-.testimonial-card p{
+.testimonial-card p {
   margin-bottom: 15px;
   font-style: italic;
   color: #eee;
   text-align: center;
 }
 
-.testimonial-card p i{
+.testimonial-card p i {
   font-size: 26px;
   color: rgba(255, 255, 255, 0.6);
 }
-
 
 footer {
   margin: 120px 120px 60px 120px;
@@ -449,12 +462,16 @@ footer {
 .footer-top {
   margin-bottom: 2rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-between;
 }
 
 .footer-top-right {
-  width: 55%;
   display: flex;
+  flex: 1.5;
+  gap: 10%;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -482,7 +499,8 @@ footer {
 }
 
 .footer-company-intro {
-  width: 35%;
+  margin-right: 2.5rem;
+  flex: 1 1 0%;
   font-size: 16px;
   color: #ffffffb3;
   line-height: 30.8px;
@@ -529,4 +547,69 @@ footer {
   height: auto;
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .start-btn {
+    right: 0;
+  }
+
+  #hero-section,
+  #about,
+  #service,
+  #team,
+  #testimonial,
+  #call-to-action,
+  footer {
+    margin: 60px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .footer-top {
+    flex-direction: row;
+  }
+
+  header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #hero-section,
+  #about,
+  #service,
+  #team,
+  #testimonial,
+  #call-to-action,
+  footer {
+    margin: 30px;
+  }
+  .hero-main {
+    flex-direction: column-reverse;
+  }
+
+  .start-btn {
+    display: none;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  #call-to-action {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+.footer-top{
+  flex-direction: column;
+}
+
+  .footer-buttom{
+    flex-direction: column;
+    gap: 20px;
+  }
 }
