@@ -547,8 +547,13 @@ footer {
   align-items: center;
 }
 
+.nav-mbl{
+  position: sticky;
+  bottom: 0;
+}
+
+
 .nav-mbl-main {
-  display: flex;
   justify-content: space-around;
   padding: 10px;
   background: linear-gradient(
